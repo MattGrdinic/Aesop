@@ -1,0 +1,78 @@
+Basic Help For Running Applications
+----------------------------------------------------------------------------
+To run compiled code we first select an application from the 'Application list'
+
+Simply click on the application name to 'select' that app. 
+
+When we do this the 'Basic Server Settings' tab will populate with 
+any values already set for this app, or have several blank fields if this is 
+the first time the app has been selected.
+
+Please note that if this is the first time we've selected the application 
+it will not run until we set a few of its options... 
+
+Thus, we can run applications using 1 of 2 main modes:
+
+1. Non-HDF
+----------------------------------------------------------------------------
+In this mode we rely on the settings provided in the 'Basic Server Settings'
+tab. We must provide the basics, which means:
+
+Application Path Name - this is set automatically
+Executable Name - This will (usually) be the same as the application path name
+Server Port - 8080 is a good default if running in non-root mode.
+Server Admin Port - 8088 is a good default choice.
+
+All other fields are optional, but it is advised to provide values.
+
+For example, 'Server Source Root' is used to tell HPHP where image, css, js, and 
+all other site files are located. This means when we selected an application to 
+compile we selected the 'source root' of the site. HPHP then went in and
+grabbed all the PHP files of the site and compiled them.
+
+What HPHP didn't do (or Aesop for that matter), is collect all other files
+which were not *.php. This means if the site has images, css, js, and anything else,
+we need to tell our compiled web app where those guys are.
+
+Thus, we select that same source root as we did when we told HPHP where the .php 
+files where, which has the effect then of saying, "here are the images, css, etc."
+
+2. HDF
+----------------------------------------------------------------------------
+We can also use an HDF file to control the server settings.
+
+This is required if we want to have more precise control over the server.
+
+For example, an HDF file allows us to set up virtual hosts, as well
+as rewrite rules. We can learn more about the possible HDF file settings at:
+
+https://github.com/facebook/hiphop-php/wiki/Runtime-options
+
+
+All applications are provided with a 'stock' HDF file during the compilation
+process. Thus, if we click the 'Detailed Server Settings (HDF File) tab the text 
+box will populate with a slew of values.
+
+However, please note that we do not use HDF mode unless we click back to the
+first tab (Basic Server Settings) and select 'Use The Custom HDF File For This Server'
+under 'Server Configuration Mode'.
+
+We can update the text of the HDF file at any time, just be sure to click: 'Save HDF File'
+to apply any changes for the next server start.
+
+
+Running Applications
+----------------------------------------------------------------------------
+When we've decided upon a run mode we provide settings as described above we can now safely 
+click the 'Start Application' button. If the server starts successfully we'll see 
+a number printed to the second column of the 'Application List', the process ID of the server.
+
+We can now select other applications and perform the same steps, the existing server will 
+continue to run until an error occurs (not likely), or we select the app again and click 
+'Stop Application'.
+
+In other words, we can manage we apps running on the server like any other tasks. We can have 
+multiple servers running at the same time, provided we use virtual hosts or set unique 
+ports for each server instance. 
+
+Please note that at this time only 'Standard Web Server' and 'Deamon' are supported Server Modes. 

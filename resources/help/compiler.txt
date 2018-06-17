@@ -1,0 +1,49 @@
+How to Compile Code:
+----------------------------------------------------------------------------
+First, Select the projects base directory using the 'Select Project Folder' button.
+
+The base directory is the 'root' of the web site. 
+
+When we do this Aesop will create a list of .php files it has found and display them 
+in the 'File List' tab. This list cannot be changed, but rarely needs to be.
+
+Next, we name the project/executable under 'Project/Executable Name'. 
+
+Now select the proper 'Build Mode'.
+
+'Analyze' will check code for errors and display the result in: 'Compiler Output'.
+'Run (Compile Full Program)' will start the full HPHP compiler.
+
+Press 'Compile Code' and get comfortable. This step can take a while. 
+
+You will see the text: 'compiling and linking CPP files...' as the last line
+in the 'Compiler Output' screen. This will continue to be the last line 
+while the compiler runs. The screen will automatically update if errors are
+output or when the compiler process finishes. 
+
+With this step done we now have a fully compiled app which has been placed in:
+
+Aesop/compiled-web-apps
+
+We needn't bother knowing this location however, as Aesop tracks our apps in the 
+'Run Compiled Code' tab. 
+
+
+==Tips and Tricks==
+
+
+Tip 1 - HipHop will fail if we have duplicate folder names with PHP files in them.
+-------------------------------------------------------------------------
+This may seem like a rare occurance, but think about a normal site
+that may have many subdirectories -- it is not at all uncommon to have a site with 
+a legacy /database directory in several locations for example.
+
+The key is the folder has to have .php files in it for this failure to occur.
+If it just has say, image files, the issue will not arise. 
+
+Tip 2 - Compiling applications takes a while. 
+-------------------------------------------------------------------------
+20 minutes or so for larger apps like WordPress.
+Even a simple single test page will take about a minute.
+
+Thus, patience is key!

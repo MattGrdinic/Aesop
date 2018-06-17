@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/apps/app-list.xml</file>
+        <file>resources/help/compiler.txt</file>
+        <file>resources/help/server.txt</file>
+        <file>resources/hdf/base.hdf</file>
+    </qresource>
+</RCC>

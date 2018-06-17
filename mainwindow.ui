@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>942</width>
+    <height>634</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Aesop - HPHP GUI - v.9b</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget_main">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>901</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Compile Code</string>
+     </attribute>
+     <widget class="QLineEdit" name="lineEdit_folderToProcess">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>401</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_selectFolder">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>40</y>
+        <width>211</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select Project Folder...</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Project Folder to Process...</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>591</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>File List</string>
+       </attribute>
+       <widget class="QTextEdit" name="textEdit_fileList">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>561</width>
+          <height>331</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Compiler Output</string>
+       </attribute>
+       <widget class="QTextEdit" name="textEdit_compilerOutput">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>561</width>
+          <height>331</height>
+         </rect>
+        </property>
+        <property name="overwriteMode">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Bad Code Check Output</string>
+       </attribute>
+       <widget class="QTextEdit" name="textEdit_compilerCodeCheckOutput">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>571</width>
+          <height>331</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_cancelCompile">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>470</y>
+        <width>181</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cancel Compile Process</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_compilerAdvancedOptions">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>120</y>
+        <width>251</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Basic Options</string>
+       </attribute>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>171</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Project/Executable Name:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_projectName">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>201</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Log Level:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_logLevel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>201</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>3</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>No Logging</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Log level 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Log level 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Log level 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Log level 4</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>121</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Build Mode:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_compilerTarget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>170</y>
+          <width>201</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Analyze</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Run (Compile Full Program)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>cpp</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>php</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>sep-ext-cpp</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>filecache</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Advanced Options</string>
+       </attribute>
+       <widget class="QLineEdit" name="lineEdit_compilerClusterCount">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>201</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>25</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>161</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Compiler Cluster Count</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Extra Command Line Options</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_compilerCommandLineOptions">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>201</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>160</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Force Compiler To Ignore Errors</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_compilerForceMode">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>180</y>
+          <width>191</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Stop On Errors</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ignore Code Errors</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_compile">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>420</y>
+        <width>141</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Compile Code</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_compileRebuildFileList">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>480</y>
+        <width>151</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rebuild File List</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_helpCompiler">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>10</y>
+        <width>91</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Help</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_compileCodeCheck">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>191</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Check Path For Bad Code</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Run Compiled Code</string>
+     </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Application List</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_appSettings">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>20</y>
+        <width>511</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Basic Server Settings</string>
+       </attribute>
+       <widget class="QLineEdit" name="lineEdit_serverPort">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>220</y>
+          <width>121</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_serverMode">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>171</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Standard Web Server</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Deamon</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>HPHPi</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>200</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Server Port:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Server Mode:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_serverExecutableName">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>10</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Executable Name:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_appPathName">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>211</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>161</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Application Path Name:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>131</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Server Source Root:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_serverSourceRoot">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>271</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_serverSelectSourceRoot">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>90</y>
+          <width>161</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Select Source Root...</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_saveServerSettings">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>410</y>
+          <width>101</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Save Settings</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_serverAdminPort">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>220</y>
+          <width>131</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>200</y>
+          <width>131</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Server Admin port:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>260</y>
+          <width>121</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Default Document:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_serverDefaultDocument">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>280</y>
+          <width>291</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_serverUseHDF">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>370</y>
+          <width>291</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Do Not Use an HDF File For Server</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Use The Custom HDF File For This Server</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="Line" name="line">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>320</y>
+          <width>461</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>350</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Server Configuration Run Mode:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Detailed Server Settings (HDF File)</string>
+       </attribute>
+       <widget class="QTextEdit" name="textEdit_serverHDFContents">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>491</width>
+          <height>411</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>111</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>HDF File Contents:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_serverSaveHDFFile">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>10</y>
+          <width>331</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Save HDF File and Update (Save) Server Settings</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_startStopApp">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>260</y>
+        <width>151</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start Application</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_appOutput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>321</width>
+        <height>181</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Application Output:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_deleteApp">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete Application</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_appList">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>321</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <column/>
+      <column/>
+     </widget>
+     <widget class="QPushButton" name="pushButton_serverClearOutput">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>300</y>
+        <width>161</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear Application Output</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>942</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionGeneral_Hints">
+   <property name="text">
+    <string>General Hints</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEdit_appPathName</tabstop>
+  <tabstop>lineEdit_serverExecutableName</tabstop>
+  <tabstop>lineEdit_serverSourceRoot</tabstop>
+  <tabstop>comboBox_serverMode</tabstop>
+  <tabstop>lineEdit_serverPort</tabstop>
+  <tabstop>lineEdit_serverAdminPort</tabstop>
+  <tabstop>tabWidget_compilerAdvancedOptions</tabstop>
+  <tabstop>lineEdit_serverDefaultDocument</tabstop>
+  <tabstop>lineEdit_projectName</tabstop>
+  <tabstop>comboBox_logLevel</tabstop>
+  <tabstop>comboBox_compilerTarget</tabstop>
+  <tabstop>lineEdit_compilerClusterCount</tabstop>
+  <tabstop>lineEdit_compilerCommandLineOptions</tabstop>
+  <tabstop>comboBox_compilerForceMode</tabstop>
+  <tabstop>pushButton_compile</tabstop>
+  <tabstop>pushButton_compileRebuildFileList</tabstop>
+  <tabstop>pushButton_helpCompiler</tabstop>
+  <tabstop>tabWidget_appSettings</tabstop>
+  <tabstop>textEdit_fileList</tabstop>
+  <tabstop>tabWidget_2</tabstop>
+  <tabstop>lineEdit_folderToProcess</tabstop>
+  <tabstop>tabWidget_main</tabstop>
+  <tabstop>pushButton_selectFolder</tabstop>
+  <tabstop>pushButton_serverSelectSourceRoot</tabstop>
+  <tabstop>pushButton_saveServerSettings</tabstop>
+  <tabstop>textEdit_compilerOutput</tabstop>
+  <tabstop>pushButton_cancelCompile</tabstop>
+  <tabstop>textEdit_serverHDFContents</tabstop>
+  <tabstop>comboBox_serverUseHDF</tabstop>
+  <tabstop>pushButton_serverSaveHDFFile</tabstop>
+  <tabstop>pushButton_startStopApp</tabstop>
+  <tabstop>textEdit_appOutput</tabstop>
+  <tabstop>pushButton_deleteApp</tabstop>
+  <tabstop>tableWidget_appList</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

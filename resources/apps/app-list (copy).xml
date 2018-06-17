@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<applications>
+<app name="demo-1">
+	<port>8080</port>
+	<mode>0</mode>
+	<executable>program</executable>
+	<serversourceroot></serversourceroot>
+</app>
+<app name="demo-2">
+	<port>8081</port>
+	<mode>0</mode>
+	<executable>program</executable>
+	<serversourceroot>/home/matthew/www/form-login</serversourceroot>
+</app>
+</applications>
+
